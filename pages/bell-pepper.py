@@ -32,12 +32,12 @@ def generate_green_shades(num_shades):
 
 
 st.page_link("app.py", label="回到首頁", icon="🏠")
-st.title("甜椒🫑")
+st.title("青椒🫑")
 bar = st.progress(0, '從『政府資料開放平臺-農產品交易行情』載入資料...')
 
 current = get_roc_date(datetime.now())
 two_years_ago = get_roc_date(datetime.now() - timedelta(days=365))
-url = f'https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?StartDate={two_years_ago}&EndDate={current}&CropCode=FK'
+url = f'https://data.moa.gov.tw/Service/OpenData/FromM/FarmTransData.aspx?StartDate={two_years_ago}&EndDate={current}&CropCode=FK5'
 with request.urlopen(url) as result:
     data = json.load(result)
 

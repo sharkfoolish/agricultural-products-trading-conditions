@@ -31,6 +31,7 @@ def generate_green_shades(num_shades):
     return shades
 
 
+st.page_link("app.py", label="回到首頁", icon="🏠")
 st.title("辣椒🌶️")
 bar = st.progress(0, '從『政府資料開放平臺-農產品交易行情』載入資料...')
 

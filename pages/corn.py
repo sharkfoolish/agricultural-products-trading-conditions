@@ -1,7 +1,7 @@
 import time
 import streamlit as st
 from datetime import datetime, timedelta
-from utils import get_roc_date, fetch_data, show_progress_bar, process_data, generate_trend_chart, generate_scatter_chart
+from utils import get_roc_date, fetch_data, process_data, generate_trend_chart, generate_scatter_chart
 
 st.page_link("app.py", label="回到首頁", icon="🏠")
 st.title("玉米🌽")

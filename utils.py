@@ -1,7 +1,5 @@
 # utils.py
-
 import json
-import time
 from datetime import datetime, timedelta
 from urllib import request
 import pandas as pd
@@ -36,13 +34,6 @@ def generate_green_shades(num_shades):
 def fetch_data(url):
     with request.urlopen(url) as result:
         return json.load(result)
-
-
-def show_progress_bar():
-    bar = st.progress(0, '從『政府資料開放平臺-農產品交易行情』載入資料...')
-    for i in range(100):
-        bar.progress(i + 1, f'目前進度 {i + 1} %')
-        time.sleep(0.01)
 
 
 def process_data(data):
